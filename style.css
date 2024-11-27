@@ -1,0 +1,534 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    background-color: #FCF6F5FF;
+}
+
+.navbar {
+    width: 250px;
+    background-color: #89ABE3FF; /* Peach color */
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s ease;
+    overflow: hidden;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 30px;
+    transition: opacity 0.3s ease;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border-color:black;
+    object-fit: cover;
+    margin-bottom: 18px;
+    border: 7px solid #000; /* Black border */
+}
+
+.brand {
+    font-size: 24px;
+    color: #333;
+    opacity: 1;
+}
+
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 30%;
+}
+
+.nav-links li {
+    margin: 15px 0;
+    justify-content: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    color: #333;
+    border: #333;
+    border: 20px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #FF6347; /* Tomato color for hover effect */
+}
+
+.main-content {
+    margin-left: 270px; /* Space for the navbar */
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+.toggle-btn {
+    background-color: #FF6347; /* Tomato color */
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+  
+    bottom: 20px;
+    left: 20px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.navbar.minimized {
+    width: 80px;
+}
+
+.navbar.minimized .profile,
+.navbar.minimized .nav-links {
+    opacity: 0;
+}
+
+.navbar.minimized .main-content {
+    margin-left: 100px; /* Adjust according to minimized navbar width */
+}
+.cv-button {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: #FF6347; /* Tomato color */
+    color: white;
+    text-decoration: none;
+    border: none;
+    size: 40px;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cv-button:hover {
+    background-color: #FF4500; /* Darker tomato color */
+}
+.hm{
+    padding: 50px;
+    font-size: larger;
+    justify-content: center;
+}
+.text_box {
+    position: relative;
+    font-weight: 200;
+  }
+  
+  .text_box .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
+  }
+  
+  .text_box .letter {
+    transform-origin: 50% 100%;
+    display: inline-block;
+    line-height: 1em;
+  }
+  .socials {
+    display: flex;
+    justify-content: left;
+    margin-top: 20px;
+}
+
+.social-icon {
+    font-size: 2rem;
+    color: #333;
+    margin: 0 15px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect: scale up and change color */
+.social-icon:hover {
+    transform: scale(1.2);
+    color: #0073e6; /* Change to any color you prefer */
+}
+
+/* Animation for sliding in from the bottom */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply the animation on load */
+.social-icon {
+    opacity: 0;
+    animation: slideUp 1s ease forwards;
+}
+
+/* Delay animations for each icon */
+.social-icon:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.social-icon:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.social-icon:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.social-icon:nth-child(4) {
+    animation-delay: 0.7s;
+}
+.social-text {
+    font-size: 1.5rem;
+    margin-right: 20px;
+    opacity: 0;
+    animation: fadeInText 1s ease forwards;
+}
+
+/* Animation for the text */
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.ani{
+    color:rgb(15, 99, 235);
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+header {
+    background: #007BFF; /* Blue background */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+h1, h2 {
+    margin: 0;
+    padding: 10px 0;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.introduction {
+    flex: 1;
+    margin-right: 20px;
+}
+.skills {
+    background: white;
+    border-radius: 8px;
+    padding: 15px; /* Reduced padding */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex: 0 0 250px; /* Reduced fixed width for skills section */
+}
+.skill {
+    margin: 10px 0;
+}
+.skill-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold; /* Make skill names bold */
+}
+.bar {
+    background: #007BFF; /* Blue color for bars */
+    height: 20px;
+    border-radius: 5px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.percentage {
+    position: absolute;
+    right: 10px;
+    color: white;
+    font-weight: bold;
+}
+section {
+    margin: 20px 0;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #666;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+#projects h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #0044cc; /* Dark blue */
+    margin-bottom: 20px;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.project-card {
+    background-color: #ffffff;
+    color: #0044cc; /* Dark blue for text */
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #000000; /* Black border for contrast */
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.project-card:hover {
+    transform: translateY(-8px); /* Increased hover effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+}
+
+.project-card .icon {
+    background-color: #0044cc; /* Dark blue */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.project-card .year {
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #0044cc;
+    background-color: #e0f0ff; /* Light blue background */
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.project-card h3 {
+    font-size: 1.2em;
+    margin: 0;
+    margin-bottom: 10px;
+    color: #0044cc; /* Dark blue */
+}
+
+.project-card p {
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    color: #333; /* Dark text */
+}
+
+.project-link {
+    font-size: 0.9em;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #0044cc; /* Dark blue */
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 68, 204, 0.4); /* Blue shadow for the link */
+    align-self: flex-start;
+}
+
+.project-link:hover {
+    background-color: #002a80; /* Darker blue */
+    color: #ffffff;
+    box-shadow: 0 6px 12px rgba(0, 42, 128, 0.6); /* Enhanced shadow on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+#certifications h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #0044cc; /* Dark blue */
+    margin-bottom: 20px;
+}
+
+.certifications-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.cert-card {
+    position: relative;
+    overflow: hidden;
+    border: 5px solid #225e9abe; /* Black border */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.cert-card img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.cert-card:hover img {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.cert-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+/* Modal styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Black with opacity */
+}
+
+.modal-content {
+    display: block;
+    margin: auto;
+    max-width: 90%;
+    max-height: 80%;
+    border: 5px solid #0044cc; /* Dark blue border */
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #ccc;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .certifications-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .certifications-container {
+        grid-template-columns: 1fr;
+    }
+}
+container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 2px solid blue;
+    border-radius: 10px;
+    background-color: #f0f8ff; /* Light blue background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: black;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkblue;
+}
